@@ -7,7 +7,7 @@ function TestModule(){
 
     const [hello, setHello] = useState('')
 
-    const serverURL = "http://loaclhost:8080"
+    const serverURL = "http://localhost:8080"
 
     useEffect( () =>{
         axios.get(serverURL+"/test/hello")

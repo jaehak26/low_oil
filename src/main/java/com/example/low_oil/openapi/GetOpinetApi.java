@@ -74,7 +74,7 @@ public class GetOpinetApi {
 
     //최근 7일간 전국 일일 평균가격
     @GetMapping("/avgRecentPrice")
-    public String getSigunPrice(@RequestParam(value ="prodcd", defaultValue = "") String prodcd) {
+    public String getAvgRecentPrice(@RequestParam(value ="prodcd", defaultValue = "") String prodcd) {
 
         String uri = "http://www.opinet.co.kr/api/avgRecentPrice.do?out=json&code="+code
                 + "&prodcd=" +prodcd ;
@@ -110,7 +110,7 @@ public class GetOpinetApi {
     }
     // 최근 1주의 주간 평균유가(전국/시도별)
     @GetMapping("/avgLastWeek")
-    public String getAvgLaskWeek(@RequestParam(value ="sido", defaultValue = "") String sido,
+    public String getAvgLastWeek(@RequestParam(value ="sido", defaultValue = "") String sido,
                                @RequestParam(value ="prodcd", defaultValue = "") String prodcd) {
 
         String uri = "http://www.opinet.co.kr/api/avgLastWeek.do?out=json&code="+code
@@ -127,9 +127,9 @@ public class GetOpinetApi {
                 .block();
     }
 
-    @GetMapping("/lowTop10")
+    @GetMapping("/lowTop20")
     //지역별 최저가 주유소(TOP20)
-    public String getLowTop10(@RequestParam(value ="area", defaultValue = "") String area,
+    public String getLowTop20(@RequestParam(value ="area", defaultValue = "") String area,
                                  @RequestParam(value ="prodcd") String prodcd,
                               @RequestParam(value ="cnt", defaultValue = "") String cnt){
 
@@ -208,7 +208,6 @@ public class GetOpinetApi {
 
     //전국 면세유 주유소 평균가격
     @GetMapping("/taxfreeAvgAllPrice")
-    //상호로 주유소 검색
     public String getTaxfreeAvgAllPrice() {
 
         String uri = "http://www.opinet.co.kr/api/taxfreeAvgAllPrice.do?out=json&code="+code;
@@ -280,7 +279,7 @@ public class GetOpinetApi {
     }
 
     @GetMapping("/taxfreeLowTop20")
-    //최근 7일간 전국 일일 상표별 면세유 평균가격
+    //면세유 최저가 top20
     public String getTaxfreeLowTop20(@RequestParam(value ="prodcd") String prodcd,
                                      @RequestParam(value ="area", defaultValue = "") String area,
                                      @RequestParam(value ="cnt", defaultValue = "") String cnt){
@@ -300,7 +299,7 @@ public class GetOpinetApi {
 
     //지역코드
     @GetMapping("/areaCode")
-    //최근 7일간 전국 일일 상표별 면세유 평균가격
+    //지역코드
     public String getAreaCode(@RequestParam(value ="area", defaultValue = "") String area){
         String uri = "http://www.opinet.co.kr/api/areaCode.do?out=json&code="+code
                 + "&area=" + area ;

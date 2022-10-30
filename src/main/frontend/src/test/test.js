@@ -13,8 +13,9 @@ function TestModule(){
         axios.get(serverURL+"/test/hello")
         .then(res => setHello(res.data))
         .catch(err => console.log(err))
+        
+    
     },[])
-
     return (
         <>
             <Paper>
@@ -22,6 +23,7 @@ function TestModule(){
             </Paper>
         </>
     )
+
 }
 
 export default TestModule

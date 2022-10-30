@@ -9,15 +9,14 @@ const [result, setResult] = useState([]);
 const [price, setPrice] = useState(null);
 const [diff, setDiff] = useState(null)
 
-const get = async () => {
-    const res= await getAvgAllPrice();
-    console.log(res.RESULT.OIL);
-    setResult(res.RESULT.OIL); 
-    console.log(result[0])
-    setPrice(res.RESULT.OIL[0].PRICE)
-    setDiff(res.RESULT.OIL[0].DIFF)
-}
+
 useEffect( () => {
+    const get = async () => {
+        const res= await getAvgAllPrice();
+            console.log(res.RESULT.OIL);
+            setResult(res.RESULT.OIL); 
+            console.log(result)
+    }
     get();
           
 },[])
@@ -26,7 +25,7 @@ useEffect( () => {
         <>
             <Paper>
                 <div>
-                    휘발유 : {result[0].PRICE} , {result[0].PRODCD}
+                    휘발유 : {} , {}
                 </div>
             </Paper>
         </>

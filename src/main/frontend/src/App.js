@@ -7,6 +7,7 @@ import axios from 'axios'
 import TestModule from './test/test'
 import TestApi from './test/testApi'
 import {getAvgAllPrice} from './openApi/opinetApi'
+import MainPage from "./component/mainPage/mainPage"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <TestModule></TestModule>
       <TestApi></TestApi>
+      <MainPage></MainPage>
     </>
   );
 }

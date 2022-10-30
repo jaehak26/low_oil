@@ -16,9 +16,9 @@ function App() {
 
   return (
     <>
-      <TestModule></TestModule>
-      <TestApi></TestApi>
+      
       <MainPage></MainPage>
+      <TestModule></TestModule>
     </>
   );
 }

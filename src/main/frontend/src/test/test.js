@@ -10,7 +10,7 @@ function TestModule(){
     const serverURL = "http://localhost:8080"
 
     useEffect( () =>{
-        axios.get(serverURL+"/test/hello")
+        axios.get(serverURL+"/api/test/hello")
         .then(res => setHello(res.data))
         .catch(err => console.log(err))
         
@@ -19,7 +19,7 @@ function TestModule(){
     return (
         <>
             <Paper>
-                백엔드에서 가져온 데이터입니다 : {hello}
+                백엔드에서 가져온 데이터입니다 : {hello && hello}
             </Paper>
         </>
     )

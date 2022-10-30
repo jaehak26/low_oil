@@ -24,12 +24,7 @@ function diffColor(diff){
   }
 }
 
-let data = {
-  prodcd: "",
-  prodnm: "",
-  price:"",
-  diff:""
-}
+
 
 //Main
 function AvgAllPrice()
@@ -38,17 +33,17 @@ function AvgAllPrice()
     //null로 초기화하면 불가능
     //result = api데이터
     const [result, setResult] = useState([]);
-    
 
-
+    //let result = []
 
     //마운트 시, return은 언마운트 시
     useEffect( () => {
       const getData = async () => {
         const res= await api.getAvgAllPrice();
         console.log(res.RESULT.OIL);
-        setResult(res.RESULT.OIL); 
+        setResult(res.RESULT.OIL)
         
+        console.log(result)
 
         //sort는 -1이면 a기 먼저 오고 1이면 b가 먼저 온다
         result.sort((a,b)=>{
@@ -71,42 +66,46 @@ function AvgAllPrice()
         }
         
       }
-  
-      const FirstDiffCell = styled(TableCell)(diffColor(result[0].DIFF))
-      const SecondDiffCell = styled(TableCell)(diffColor(result[1].DIFF))
-      const ThirdDiffCell = styled(TableCell)(diffColor(result[2].DIFF))
-      const FourthDiffCell = styled(TableCell)(diffColor(result[3].DIFF))
-      
-      return (
-          <>
-          <Table>
-          <TableHead>
-            <TableRow>
-              <MyTableCell>휘발유</MyTableCell>
-              <MyTableCell>고급 휘발유</MyTableCell>
-              <MyTableCell>경유</MyTableCell>
-              <MyTableCell>LPG</MyTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-            <MyTableCell>{result[0].PRICE}</MyTableCell>
-            <MyTableCell>{result[1].PRICE}</MyTableCell>
-            <MyTableCell>{result[2].PRICE}</MyTableCell>
-            <MyTableCell>{result[3].PRICE}</MyTableCell>
-            </TableRow>
-            <TableRow>
-            <FirstDiffCell>{result[0].DIFF}</FirstDiffCell>
-            <SecondDiffCell>{result[1].DIFF}</SecondDiffCell>
-            <ThirdDiffCell>{result[2].DIFF}</ThirdDiffCell>
-            <FourthDiffCell>{result[3].DIFF}</FourthDiffCell>
-            </TableRow>
-          </TableBody>
-        </Table>  
-      </>    
-      )
+
+
+
     },[])
 
+    if(!result){return null}
+
+    const FirstDiffCell = styled(TableCell)(diffColor(result[0]?.DIFF))
+    const SecondDiffCell = styled(TableCell)(diffColor(result[1]?.DIFF))
+    const ThirdDiffCell = styled(TableCell)(diffColor(result[2]?.DIFF))
+    const FourthDiffCell = styled(TableCell)(diffColor(result[3]?.DIFF))
+    
+    return (
+        <>
+        <Table>
+        <TableHead>
+          <TableRow>
+            <MyTableCell>휘발유</MyTableCell>
+            <MyTableCell>고급 휘발유</MyTableCell>
+            <MyTableCell>경유</MyTableCell>
+            <MyTableCell>LPG</MyTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+          <MyTableCell>{result[0]?.PRICE}</MyTableCell>
+          <MyTableCell>{result[1]?.PRICE}</MyTableCell>
+          <MyTableCell>{result[2]?.PRICE}</MyTableCell>
+          <MyTableCell>{result[3]?.PRICE}</MyTableCell>
+          </TableRow>
+          <TableRow>
+          <FirstDiffCell>{result[0]?.DIFF}</FirstDiffCell>
+          <SecondDiffCell>{result[1]?.DIFF}</SecondDiffCell>
+          <ThirdDiffCell>{result[2]?.DIFF}</ThirdDiffCell>
+          <FourthDiffCell>{result[3]?.DIFF}</FourthDiffCell>
+          </TableRow>
+        </TableBody>
+      </Table>  
+    </>    
+    )
 
 
 

@@ -9,7 +9,7 @@ import AvgAllPrice from './table/avgAllPrice'
 function MainPage(){
 
     return (<div>
-        <Container fixed theme={theme} style={
+        <Container maxWidth="sm" theme={theme} style={
             {borderRadius: 35,
             borderStyle: 'solid',
             borderColor:"#047ff2",

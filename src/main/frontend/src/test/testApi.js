@@ -25,8 +25,9 @@ useEffect( () => {
         <>
             <Paper>
                 <div>
-                    휘발유 : {} , {}
+                    휘발유 : {result[0]?.PRICE} , {result[0].DIFF}
                 </div>
+                <h2>안전연산자는 신이야...!</h2>
             </Paper>
         </>
     )

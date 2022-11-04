@@ -8,6 +8,7 @@ import AvgAllPrice from './table/avgAllPrice'
 import AvgSigunPrice from './table/avgSigunPrice'
 import AvgSidoPrice from './table/avgSidoPrice'
 import AvgSigunPriceComponent from './avgSigunPriceComp'
+import AvgRecentPriceComponent from './recentPriceComp';
 
 
 //CSS
@@ -18,6 +19,7 @@ const FirstPageContainer = styled(Container)({
     borderWidth:"1px",
     maxWidth:"xs",
     theme:theme,
+    marginTop:"20px",
 })
 
 function MainPage(){
@@ -26,11 +28,14 @@ function MainPage(){
         <FirstPageContainer maxWidth="sm">
             <AvgAllPrice></AvgAllPrice>
         </FirstPageContainer>
-        <br/>
+
         <FirstPageContainer maxWidth="sm">
             <AvgSigunPriceComponent/>
         </FirstPageContainer>
-    
+        
+        <FirstPageContainer maxWidth="sm">
+            <AvgRecentPriceComponent/>
+        </FirstPageContainer>
     </div>)
 }
 

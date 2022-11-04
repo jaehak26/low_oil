@@ -43,7 +43,8 @@ function SidoSelect(){
         <FormControl 
         sx={{minWidth:"100px", 
         marginTop:"10px",
-        align:'right'}} 
+        align:'right',
+        marginRight:"5px"}} 
         size="small">
             {/* InputLabel의 id는 생략함 */ }
             <InputLabel>시도</InputLabel>

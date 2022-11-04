@@ -7,3 +7,10 @@ export const avgSigunSelectData = atom({
         sigunCode:""
     }
 })
+
+export const avgRecentPriceSelectData = atom({
+    key:"avgRecentPriceSelectData",
+    default:{
+        selected:"B027"
+    }
+})

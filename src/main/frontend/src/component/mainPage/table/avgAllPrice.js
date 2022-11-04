@@ -43,7 +43,7 @@ function AvgAllPrice()
         //console.log(res.RESULT.OIL);
         setResult(res.RESULT.OIL)
         
-        console.log(result)
+        //console.log(result)
 
         //sort는 -1이면 a기 먼저 오고 1이면 b가 먼저 온다
         result.sort((a,b)=>{

@@ -20,10 +20,10 @@ function SigunSelect(){
 
     useEffect(()=>{
         let getData = async()=>{
-            console.log(coil?.sidoCode)
+            //console.log(coil?.sidoCode)
             const res = await getAreaCode(coil.sidoCode);
             setAreaData(res.RESULT.OIL);
-            console.log(res.RESULT.OIL)
+            //console.log(res.RESULT.OIL)
 
             //두번째 select바를 첫 index로 되돌림
             //getData안에 넣으면 클라이언트에서
@@ -44,8 +44,8 @@ function SigunSelect(){
         if(selectValue==="all"){
             setCoil({...coil,sigunCode:""})
         }
-        console.log(selectedValue)
-        console.log(coil.sigunCode)   
+        //console.log(selectedValue)
+        //console.log(coil.sigunCode)   
     };
 
     

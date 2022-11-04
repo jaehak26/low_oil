@@ -16,7 +16,7 @@ const MyTableCell = styled(TableCell)({
 })
 
 function diffColor(diff){
-    console.log(diff>=0)
+    //console.log(diff>=0)
     if(Number(diff)>=0){return {color:"green"}}
     else if(Number(diff)<0){return {color:"red"}}
     else{}
@@ -39,13 +39,13 @@ function AvgSidoPrice(){
 
     const [apiData, setApiData] = useState(data)
     //const [result, setResult] = useState([])
-    console.log(apiData)
+    //console.log(apiData)
     const [coil, setCoil] = useRecoilState(avgSigunSelectData)
 
 
     useEffect( ()=>{
         const getData = async ()=>{
-            console.log(`sigunCode= ${coil.sigunCode}`)
+            //console.log(`sigunCode= ${coil.sigunCode}`)
             if(coil?.sigunCode == ""){
                 //console.log(`coil.sidoCode${coil.sidoCode}`)
                 const res = await getSidoPrice(coil.sidoCode)
@@ -77,7 +77,7 @@ function AvgSidoPrice(){
         if(apiData[i].PRODCD === "C004"){
             apiData.splice(i,1)
         }
-        console.log(i)
+        //console.log(i)
     
     }
 

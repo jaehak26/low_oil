@@ -67,8 +67,8 @@ function AvgSidoPrice(){
         getData()
     },[coil?.sidoCode,coil?.sigunCode])
 
-    console.log(data)
-    console.log(apiData)
+    //console.log(data)
+    //console.log(apiData)
 
     for(let dataIdx=0; dataIdx<data.length; dataIdx++){
         let count = 0 

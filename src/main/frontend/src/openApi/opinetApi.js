@@ -24,9 +24,9 @@ export async function getAvgAllPrice() {
 
 //시도별 주유소 평균가
 
-export async function getSidoPrice() {
+export async function getSidoPrice(sido="",prodcd="") {
 
-    let URL = opinetURL + "avgSidoPrice"
+    let URL = opinetURL + "avgSidoPrice?sido=" + sido + "&prodcd=" +prodcd;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -40,9 +40,10 @@ export async function getSidoPrice() {
 
 //시군구별 주유소 평균가
 
-export async function getSigunPrice() {
+export async function getSigunPrice(sido="",sigun="",prodcd="") {
 
-    let URL = opinetURL + "avgSigunPrice"
+    let URL = opinetURL + "avgSigunPrice?sido="+sido
+                +"&prodcd=" +prodcd +"&sigun=" +sigun;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -56,9 +57,9 @@ export async function getSigunPrice() {
 
 //최근 7일간 전국 일일 평균가
 
-export async function getAvgRecentPrice() {
+export async function getAvgRecentPrice(prodcd="") {
 
-    let URL = opinetURL + "avgRecentPrice"
+    let URL = opinetURL + "avgRecentPrice?prodcd="+prodcd
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -72,9 +73,9 @@ export async function getAvgRecentPrice() {
 
 //최근 7일간 전국 일일 상표별 평균가
 
-export async function getPollAvgRecentPrice() {
+export async function getPollAvgRecentPrice(prodcd="",pollcd="") {
 
-    let URL = opinetURL + "pollAvgRecentPrice"
+    let URL = opinetURL + "pollAvgRecentPrice?prodcd="+prodcd+"&pollcd="+pollcd
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -88,9 +89,9 @@ export async function getPollAvgRecentPrice() {
 
 //최근 1주의 주간 평균 유가(전국/시도별)
 
-export async function getAvgLastWeek() {
+export async function getAvgLastWeek(sido="",prodcd="") {
 
-    let URL = opinetURL + "avgLastWeek"
+    let URL = opinetURL + "avgLastWeek?&sido="+ sido + "&prodcd=" +prodcd;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -104,9 +105,10 @@ export async function getAvgLastWeek() {
 
 //지역별 최저가 주유소(top20)
 
-export async function getLowTop20() {
+export async function getLowTop20(area="",prodcd="",cnt="") {
 
-    let URL = opinetURL + "lowTop20"
+    let URL = opinetURL + "lowTop20?area="+area
+    +"&prodcd=" +prodcd + "&cnt=" +cnt ;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -120,9 +122,10 @@ export async function getLowTop20() {
 
 //반경내 주유소
 
-export async function getAroundAll() {
+export async function getAroundAll(x,y,radius,prodcd,sort) {
 
-    let URL = opinetURL + "aroundAll"
+    let URL = opinetURL + "aroundAll?x="+x+"&y="+y
+    +"&radius=" + radius + "&prodcd=" +prodcd + "&sort=" +sort
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -136,9 +139,9 @@ export async function getAroundAll() {
 
 //주유소 상세정보(id)
 
-export async function getDetailById() {
+export async function getDetailById(id="") {
 
-    let URL = opinetURL + "detailById"
+    let URL = opinetURL + "detailById?id="+id
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -152,9 +155,10 @@ export async function getDetailById() {
 
 //상호로 주유소 검색
 
-export async function getSearchByName() {
+export async function getSearchByName(osnm="",area="") {
 
-    let URL = opinetURL + "searchByName"
+    let URL = opinetURL + "searchByName?osnm="+osnm
+    +"&area=" + area;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -170,7 +174,7 @@ export async function getSearchByName() {
 
 export async function getTaxfreeAvgAllPrice() {
 
-    let URL = opinetURL + "taxfreeAvgAllPrice"
+    let URL = opinetURL + "taxfreeAvgAllPrice?"
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -184,9 +188,9 @@ export async function getTaxfreeAvgAllPrice() {
 
 //시도별 면세유 주유소 평균가
 
-export async function getTaxfreeAvgSidoPrice() {
+export async function getTaxfreeAvgSidoPrice(sido="",prodcd="") {
 
-    let URL = opinetURL + "taxfreeAvgSidoPrice"
+    let URL = opinetURL + "taxfreeAvgSidoPrice?sido="+ sido + "&prodcd=" + prodcd;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -200,9 +204,10 @@ export async function getTaxfreeAvgSidoPrice() {
 
 //시군구별 면세유 주유소 평균가
 
-export async function getTaxfreeAvgSigunPrice() {
+export async function getTaxfreeAvgSigunPrice(sido="",sigun="",prodcd="") {
 
-    let URL = opinetURL + "taxfreeAvgSigunPrice"
+    let URL = opinetURL + "taxfreeAvgSigunPrice?sido="+sido
+    +"&sigun=" + sigun + "&prodcd=" + prodcd;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -216,9 +221,9 @@ export async function getTaxfreeAvgSigunPrice() {
 
 //최근 7일간 전국 일일 상표별 면세유 평균가
 
-export async function getTaxPollAvgRecentPrice() {
+export async function getTaxPollAvgRecentPrice(prodcd="",pollcd="") {
 
-    let URL = opinetURL + "taxPollAvgRecentPrice"
+    let URL = opinetURL + "taxPollAvgRecentPrice?prodcd="+prodcd+"&pollcd="+pollcd
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -232,9 +237,10 @@ export async function getTaxPollAvgRecentPrice() {
 
 //면세유 최저가 top20
 
-export async function taxfreeLowTop20() {
+export async function taxfreeLowTop20(prodcd="",area="",cnt="") {
 
-    let URL = opinetURL + "getTaxfreeLowTop20"
+    let URL = opinetURL + "getTaxfreeLowTop20?prodcd="+prodcd
+    +"&area=" + area + "&cnt=" + cnt;
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -248,9 +254,9 @@ export async function taxfreeLowTop20() {
 
 //지역코드
 
-export async function getAreaCode() {
+export async function getAreaCode(area="") {
 
-    let URL = opinetURL + "areaCode"
+    let URL = opinetURL + "areaCode?area="+area
 
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
@@ -258,7 +264,7 @@ export async function getAreaCode() {
         console.log(result)
         return result
     }
-
+    console.log(area)
     return await data();
 }
 

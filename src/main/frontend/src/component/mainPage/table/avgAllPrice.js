@@ -40,7 +40,7 @@ function AvgAllPrice()
     useEffect( () => {
       const getData = async () => {
         const res= await api.getAvgAllPrice();
-        console.log(res.RESULT.OIL);
+        //console.log(res.RESULT.OIL);
         setResult(res.RESULT.OIL)
         
         console.log(result)
@@ -54,14 +54,14 @@ function AvgAllPrice()
         
         //splice(index, n)는 index부터 n개 삭제함
             
-        console.log(result)
+        //console.log(result)
     }
 
       getData();
-      console.log(result)
+      //console.log(result)
 
       for(let i =0 ; i<result.length; i++){
-        if(result[i].PRODCD == "C004"){
+        if(result[i].PRODCD === "C004"){
           result.splice(i,1)
         }
         

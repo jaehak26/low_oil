@@ -1,7 +1,7 @@
 import React from 'react';
 import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps';
 
-const YOUR_NCP_CLIENT_ID = 'z83axj5nl8'
+import {YOUR_NCP_CLIENT_ID} from './code'
 
 function NaverMapComponent() {
   //const id = this.props.itemData.id;

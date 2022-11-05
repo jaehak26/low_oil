@@ -52,7 +52,7 @@ function RecentPrice(){
     
     },[coil.selected])
 
-    //그래프 빠르게 렌더링
+    //그래프 빠르게 렌더링 -apiArr값이 변할 때 렌더링
     useEffect(()=>{
         let gData = recentPriceData(apiArr,coil?.selected)
         setGraphData(gData)

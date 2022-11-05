@@ -52,7 +52,7 @@ function RecentPriceSelect(){
                 <MenuItem value={2}>경유</MenuItem>
                 <MenuItem value={3}>LPG</MenuItem>
             </Select>
-            {coil.selected}
+            {/*coil.selected*/}
         </FormControl>
     </>
 }

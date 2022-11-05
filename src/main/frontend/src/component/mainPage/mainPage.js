@@ -9,6 +9,9 @@ import AvgSigunPrice from './table/avgSigunPrice'
 import AvgSidoPrice from './table/avgSidoPrice'
 import AvgSigunPriceComponent from './avgSigunPriceComp'
 import AvgRecentPriceComponent from './recentPriceComp';
+import Lowtop20Component from './lowtop20Comp'
+
+import Map from '../maps/navermap'
 
 
 //CSS
@@ -36,6 +39,12 @@ function MainPage(){
         <FirstPageContainer maxWidth="sm">
             <AvgRecentPriceComponent/>
         </FirstPageContainer>
+
+        <FirstPageContainer maxWidth="sm">
+            <Lowtop20Component></Lowtop20Component>
+        </FirstPageContainer>
+
+        <Map></Map>
     </div>)
 }
 

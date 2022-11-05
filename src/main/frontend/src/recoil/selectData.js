@@ -15,3 +15,13 @@ export const avgRecentPriceSelectData = atom({
         data:[]
     }
 })
+
+export const lowTop20SelectData = atom({
+    key:'lowTop20SelectData',
+    default:{
+        sidoCode:"01",
+        sigunCode:"",
+        prodcd:"B027",
+        top:10
+    }
+})

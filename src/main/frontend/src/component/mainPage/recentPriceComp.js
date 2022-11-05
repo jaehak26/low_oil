@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 
 import RecentPriceSelect from './selectBar/avgRecentPrice/recentPriceSelect'
-
+import RecentPrice from './graph/recentPrice/recentPrice'
 
 
 function AvgRecentPriceComponent(){
@@ -13,7 +13,7 @@ function AvgRecentPriceComponent(){
             <div style={{display:'flex', justifyContent:'flex-end'}}>
                 <RecentPriceSelect></RecentPriceSelect>
             </div>
-            
+            <RecentPrice></RecentPrice>
         </>
     )
 

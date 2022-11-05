@@ -11,6 +11,7 @@ export const avgSigunSelectData = atom({
 export const avgRecentPriceSelectData = atom({
     key:"avgRecentPriceSelectData",
     default:{
-        selected:"B027"
+        selected:0,
+        data:[]
     }
 })

@@ -11,11 +11,14 @@ import {avgRecentPriceSelectData} from '../../../../recoil/selectData'
 function RecentPriceSelect(){
     //select바의 내용을 저장하는 값
     //select의 초기값 설정도 가능
-    const [selectValue,setSelectValue] = useState("B027")
+    const [selectValue,setSelectValue] = useState(0)
     //전역 변수 세팅
     const [coil, setCoil] = useRecoilState(avgRecentPriceSelectData)
 
-
+    useEffect(()=>{
+        setSelectValue(0)
+        setCoil({...coil,selected:0});
+    },[])
 
     //select바 onChange함수
     const handleChange = (event) => {
@@ -42,11 +45,12 @@ function RecentPriceSelect(){
             label="oil"
             onChange={handleChange}
             autoWidth
-            >            
-                <MenuItem value="B027">휘발유</MenuItem>
-                <MenuItem value="B034">고급 휘발유</MenuItem>
-                <MenuItem value="D047">경유</MenuItem>
-                <MenuItem value="K015">LPG</MenuItem>
+            >
+                <MenuItem value={"all"}>전체</MenuItem>
+                <MenuItem value={0}>휘발유</MenuItem>
+                <MenuItem value={1}>고급 휘발유</MenuItem>
+                <MenuItem value={2}>경유</MenuItem>
+                <MenuItem value={3}>LPG</MenuItem>
             </Select>
             {coil.selected}
         </FormControl>

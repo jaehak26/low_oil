@@ -22,6 +22,6 @@ export const lowTop20SelectData = atom({
         sidoCode:"01",
         sigunCode:"",
         prodcd:"B027",
-        top:10
+        cnt:5
     }
 })

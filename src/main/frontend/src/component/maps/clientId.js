@@ -1,0 +1,1 @@
+export const YOUR_NCP_CLIENT_ID = 'z83axj5nl8'

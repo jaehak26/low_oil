@@ -37,7 +37,7 @@ let data=[{PRODCD:"B027",PRICE:"-",DIFF:"-",},
         {PRODCD:"K015",PRICE:"-",DIFF:"-",}]
 
 
-function AvgSidoPrice(){
+function AvgSigunPrice(){
 
     const [apiData, setApiData] = useState([])
     //console.log(apiData)
@@ -52,7 +52,7 @@ function AvgSidoPrice(){
                 //console.log(`coil.sidoCode${coil.sidoCode}`)
                 const res = await getSigunPrice(coil.sidoCode,coil.sigunCode)
                 setApiData(res.RESULT.OIL)
-                console.log(res)
+                //console.log(res)
 
             }
             
@@ -80,7 +80,7 @@ function AvgSidoPrice(){
             
         }
         if(count === 0){
-            console.log(data[dataIdx].PRODCD)
+            //console.log(data[dataIdx].PRODCD)
             apiData.push(data[dataIdx])
         }
     }
@@ -132,4 +132,4 @@ function AvgSidoPrice(){
     )
 }
 
-export default AvgSidoPrice
+export default AvgSigunPrice

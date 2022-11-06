@@ -1,7 +1,9 @@
 import SidoSelect from './selectBar/lowTop20/sidoSelect'
 import SigunSelect from './selectBar/lowTop20/sigunSelect'
+import ProdcdSelect from './selectBar/lowTop20/prodcdSelect'
+import CntSelect from './selectBar/lowTop20/cntSelect'
 
-
+import SidoLowTop from './table/lowTop20/sidoLowTop'
 function Lowtop20Component(){
     
     return (
@@ -11,8 +13,10 @@ function Lowtop20Component(){
             <div style={{display:'flex', justifyContent:'flex-end'}}>
                 <SidoSelect></SidoSelect>
                 <SigunSelect></SigunSelect>
+                <ProdcdSelect></ProdcdSelect>
+                <CntSelect></CntSelect>
             </div>
-
+            <SidoLowTop></SidoLowTop>
         </>
     )
 

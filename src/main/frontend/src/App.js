@@ -10,6 +10,12 @@ import TestApi from './test/testApi'
 import {getAvgAllPrice} from './openApi/opinetApi'
 import MainPage from "./component/mainPage/mainPage"
 
+import Map from './component/mainPage/table/lowTop20/lowtopMap'
+
+import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps';
+
+import {YOUR_NCP_CLIENT_ID} from './component/maps/clientId'
+
 function App() {
 
  
@@ -18,6 +24,13 @@ function App() {
   return (
     <>
       <div className='App'>
+	  <RenderAfterNavermapsLoaded
+        ncpClientId={YOUR_NCP_CLIENT_ID}
+        error={<p>Maps Load Error</p>}
+        loading={<p>Maps Loading...</p>}
+    > 
+        
+    
 			<BrowserRouter>
 
 				<Routes>
@@ -25,8 +38,10 @@ function App() {
 					<Route path="/test/api" element={<TestApi />}></Route>
 					{/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는경우 처리 */}
 					<Route path="/test/module" element={<TestModule />}></Route>
+					<Route path="/test/navermap" element={<Map></Map>}></Route>
 				</Routes>
 			</BrowserRouter>
+			</RenderAfterNavermapsLoaded>
 		</div>
 	);
 

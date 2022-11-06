@@ -11,7 +11,7 @@ import AvgSigunPriceComponent from './avgSigunPriceComp'
 import AvgRecentPriceComponent from './recentPriceComp';
 import Lowtop20Component from './lowtop20Comp'
 
-import Map from '../maps/navermap'
+import Map from '../maps/testmap'
 
 
 //CSS
@@ -44,7 +44,7 @@ function MainPage(){
             <Lowtop20Component></Lowtop20Component>
         </FirstPageContainer>
 
-        <Map></Map>
+        
     </div>)
 }
 

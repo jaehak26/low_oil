@@ -25,6 +25,7 @@ function diffColor(diff){
 }
 
 
+  
 
 //Main
 function AvgAllPrice()

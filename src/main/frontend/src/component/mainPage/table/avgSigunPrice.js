@@ -46,8 +46,8 @@ function AvgSigunPrice(){
 
     useEffect( ()=>{
         const getData = async ()=>{
-            console.log(`sidoCode = ${coil.sidoCode}`)
-            console.log(`sigunCode = ${coil.sigunCode}`)
+            //console.log(`sidoCode = ${coil.sidoCode}`)
+            //console.log(`sigunCode = ${coil.sigunCode}`)
             if(coil?.sigunCode !== ""){
                 //console.log(`coil.sidoCode${coil.sidoCode}`)
                 const res = await getSigunPrice(coil.sidoCode,coil.sigunCode)

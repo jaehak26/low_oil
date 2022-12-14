@@ -15,16 +15,21 @@ export default function LoginComp() {
     navigate('/login');
   };
 
+  const navigateToRegister = () => {
+    navigate('/userRegister');
+  };
+
   const LoginButton = () => {
     if (loginMessageCoil.message == 'SUCCESS') {
       return (
         <>
           <div>{loginMessageCoil.userId}님 안녕하세요</div>
-          <Button onClick={navigateToLogout}>LOGOUT</Button>
+          <Button onClick={navigateToLogout}>로그아웃</Button>
         </>
       );
     }
-    return <Button onClick={navigateToLogin}>Login</Button>;
+    return <><Button onClick={navigateToLogin}>로그인</Button>
+              <Button onClick={navigateToRegister}>회원가입</Button></>;
   };
 
   const navigateToLogout = () => {

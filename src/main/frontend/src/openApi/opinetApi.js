@@ -15,7 +15,7 @@ export async function getAvgAllPrice() {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -31,7 +31,7 @@ export async function getSidoPrice(sido="",prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -48,7 +48,7 @@ export async function getSigunPrice(sido="",sigun="",prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -64,7 +64,7 @@ export async function getAvgRecentPrice(prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -80,7 +80,7 @@ export async function getPollAvgRecentPrice(prodcd="",pollcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -96,7 +96,7 @@ export async function getAvgLastWeek(sido="",prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -113,7 +113,7 @@ export async function getLowTop20(area="",prodcd="",cnt="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -130,7 +130,7 @@ export async function getAroundAll(x,y,radius,prodcd,sort) {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -146,7 +146,7 @@ export async function getDetailById(id="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -163,7 +163,7 @@ export async function getSearchByName(osnm="",area="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -179,7 +179,7 @@ export async function getTaxfreeAvgAllPrice() {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -195,7 +195,7 @@ export async function getTaxfreeAvgSidoPrice(sido="",prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -212,7 +212,7 @@ export async function getTaxfreeAvgSigunPrice(sido="",sigun="",prodcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -228,7 +228,7 @@ export async function getTaxPollAvgRecentPrice(prodcd="",pollcd="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -245,7 +245,7 @@ export async function taxfreeLowTop20(prodcd="",area="",cnt="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
 
@@ -261,10 +261,10 @@ export async function getAreaCode(area="") {
     const data = async() => {
         const respose = await fetch(URL, requestOptions)
         const result = await respose.json()
-        console.log(result)
+        //console.log(result)
         return result
     }
-    console.log(area)
+    //console.log(area)
     return await data();
 }
 

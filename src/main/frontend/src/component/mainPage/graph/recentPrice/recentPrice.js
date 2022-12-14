@@ -47,7 +47,7 @@ function RecentPrice(){
                 setApiArr(res1?.RESULT.OIL)
             }
             getData()
-            console.log(apiArr)        
+            //console.log(apiArr)        
         }
     
     },[coil.selected])

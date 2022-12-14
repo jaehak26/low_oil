@@ -17,6 +17,7 @@ import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps';
 import {YOUR_NCP_CLIENT_ID} from './component/maps/clientId'
 
 import LoginForm from './component/Login/LoginForm'
+import RegisterForm from './component/Login/RegisterForm'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
 					<Route path="/test/module" element={<TestModule />}></Route>
 					<Route path="/test/navermap" element={<Map></Map>}></Route>
 					<Route path="/login" element={<LoginForm />}></Route>
+					<Route path="/userRegister" element={<RegisterForm />}></Route>
 				</Routes>
 			</BrowserRouter>
 			</RenderAfterNavermapsLoaded>

@@ -16,7 +16,7 @@ function AvgSigunPriceComponent(){
     const [comp, setComp] = useState(<p></p>)
     
     useEffect(()=>{
-        console.log(coil.sigunCode)
+        //console.log(coil.sigunCode)
         if(coil.sigunCode===""){
             setComp(<AvgSidoPrice></AvgSidoPrice>)
         }

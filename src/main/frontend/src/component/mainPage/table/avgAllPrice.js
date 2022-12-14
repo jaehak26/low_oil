@@ -14,11 +14,11 @@ const MyTableCell = styled(TableCell)({
 function diffColor(diff){
   if(diff>0){
     return({border: "none",
-    color: "green",
+    color: "red",
     textAlign:"center"})
   }else if(diff<0){
     return ({border: "none",
-    color: "red",textAlign:"center"})
+    color: "green",textAlign:"center"})
   }else{
     return ({border: "none",textAlign:"center"})
   }

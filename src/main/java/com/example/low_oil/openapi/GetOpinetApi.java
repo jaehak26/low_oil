@@ -3,7 +3,6 @@ package com.example.low_oil.openapi;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
-
 import com.example.low_oil.OpenApiCode;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")

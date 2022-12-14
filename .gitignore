@@ -38,3 +38,7 @@ out/
 
 ### open api code ###
 OpenApiCode.java
+
+application-aws.properties
+
+userRepositoryTest.java

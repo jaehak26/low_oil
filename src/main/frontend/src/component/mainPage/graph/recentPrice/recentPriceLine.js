@@ -41,7 +41,7 @@ const RecentPriceLine = ({ data /* see data tab */ }) => (
         legendOffset: -43,
         legendPosition: 'middle',
     }}
-    colors={{ scheme: 'category10' }}
+    colors={{"scheme":"category10"}}
     pointSize={5}
     pointColor={{ from: 'color', modifiers: [] }}
     pointBorderColor={{ from: 'color', modifiers: [] }}

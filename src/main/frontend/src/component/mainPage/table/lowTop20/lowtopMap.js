@@ -14,13 +14,13 @@ export const fromTM128ToLatLng = (mapx = 0, mapy = 0) => {
 
     KATEC = '+proj=tmerc +lat_0=38 +lon_0=128 +k=0.9999 +x_0=400000 +y_0=600000 +ellps=bessel +units=m +no_defs +towgs84=-115.80,474.99,674.11,1.16,-2.31,-1.63,6.43'
   let WGS84 = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs';
-  var x = 932122.881508; //5179 좌표계 x
-  var y = 1944549.626052; //5179 좌표계 y
+  //var x = 932122.881508; //5179 좌표계 x
+  //var y = 1944549.626052; //5179 좌표계 y
   let [lng, lat] = proj4(KATEC, WGS84, [mapx, mapy]);
   return [lat, lng];
 };
 
-const TM128 = { x: 299091.022, y: 548321.9904 };
+//const TM128 = { x: 299091.022, y: 548321.9904 };
 
 function NaverMapComponent() {
   //const id = this.props.itemData.id;
@@ -32,22 +32,22 @@ function NaverMapComponent() {
 
   //const [pos, setPos] = useState(null)
 
-  React.useEffect(() => {
+  //React.useEffect(() => {
     //setLatlng(fromTM128ToLatLng(lowtopMapData.x, lowtopMapData.y));
 
     //let ll = { lat: latlng[0], lng: latlng[1] }
     //setCenter(ll)
     //console.log(center)
     //setPos(new navermaps.LatLng(ll.lat, ll.lng))
-  }, [lowtopMapData]);
+  //}, [lowtopMapData]);
 
-  useEffect(()=>{
+  //useEffect(()=>{
     //console.log(latlng)
     //let ll = { lat: latlng[0], lng: latlng[1] }
     //setCenter(ll)
     //setPos(new navermaps.LatLng(ll.lat, ll.lng))
 
-  },[latlng])
+  //},[latlng])
 
   return (<>
   

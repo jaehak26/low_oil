@@ -33,7 +33,7 @@ function CntSelect(){
         marginRight:"5px"}} 
         size="small">
             {/* InputLabel의 id는 생략함 */ }
-            <InputLabel>시도</InputLabel>
+            <InputLabel>표시</InputLabel>
             <Select
             labelId="sidoSelectLabel"
             id="sidoSelect"

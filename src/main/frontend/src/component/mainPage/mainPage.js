@@ -5,17 +5,18 @@ import { maxWidth, styled } from '@mui/system';
 
 import theme from '../../theme'
 import AvgAllPrice from './table/avgAllPrice'
-import AvgSigunPrice from './table/avgSigunPrice'
-import AvgSidoPrice from './table/avgSidoPrice'
+
 import AvgSigunPriceComponent from './avgSigunPriceComp'
 import AvgRecentPriceComponent from './recentPriceComp';
 import Lowtop20Component from './lowtop20Comp'
+
+import LoginComp from '../Login/LoginComp'
 
 import Map from '../maps/testmap'
 
 
 //CSS
-const FirstPageContainer = styled(Container)({
+export const FirstPageContainer = styled(Container)({
     borderRadius: 35,
     borderStyle: 'solid',
     borderColor:"#047ff2",
@@ -28,6 +29,11 @@ const FirstPageContainer = styled(Container)({
 function MainPage(){
 
     return (<div>
+        <FirstPageContainer maxWidth="sm">
+        <LoginComp></LoginComp>
+        </FirstPageContainer>
+        
+
         <FirstPageContainer maxWidth="sm">
             <AvgAllPrice></AvgAllPrice>
         </FirstPageContainer>

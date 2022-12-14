@@ -33,7 +33,7 @@ function ProdcdSelect(){
         marginRight:"5px"}} 
         size="small">
             {/* InputLabel의 id는 생략함 */ }
-            <InputLabel>시도</InputLabel>
+            <InputLabel>기름</InputLabel>
             <Select
             labelId="sidoSelectLabel"
             id="sidoSelect"

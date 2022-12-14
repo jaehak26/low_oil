@@ -7,10 +7,10 @@ let defaultData = {
 
 let dataXY = (x,y)=>{return {x:x,y:y}}
 
-let lineColor = ["hsl(324, 70%, 50%)",
-    "hsl(327, 70%, 50%)",
+let lineColor = ["hsl(215, 100%, 56%)",
+    "hsl(98, 100%, 74%)",
     "hsl(318, 70%, 50%)",
-    "hsl(293, 70%, 50%)"]
+    "hsl(253, 79%, 71%)"]
 
 let lineId = ["휘발유", "고급 휘발유","경유","LPG"]
 
@@ -53,6 +53,8 @@ function priceData(data=[],selectIdx){
     let lineData= {...defaultData}
     lineData.id = lineId[selectIdx]
     lineData.color = lineColor[selectIdx]
+
+    console.log(lineData.color)
 
     let arrData=[]
     for(let idx=0; idx<data.length; idx++){

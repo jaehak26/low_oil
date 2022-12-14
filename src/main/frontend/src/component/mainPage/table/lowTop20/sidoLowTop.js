@@ -117,6 +117,7 @@ function SidoLowtop20(){
         </Table>
     <Dialog open={dialogOpen}
     onBackdropClick={()=>{setdialogOpen(false)}}
+    onClose={(reason="backdropClick")=>{setdialogOpen(false)}}
     fullWidth={true}>
         
         <DialogActions>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useInsertionEffect } from 'react';
 import Container from '@mui/material/Container'
-
+import './input.css'
 import { clickLoginButton } from './ChangeForm';
 import { loginMessage } from '../../recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import useAsync from '../../useAsync';
+import GotoMain from '../GotoMain'
 
 import { Button } from '@mui/material';
 
@@ -111,11 +112,11 @@ function LoginForm() {
           login
         </Button>
       </fieldset>
-        <div> 
+        <div className='testDiv' style={{display:'none'}}> 
         {users.isUserExist} ({users.userId}) 
-
         </div>
       </div>
+      <GotoMain />
     </Container>
   );
 }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useInsertionEffect } from 'react';
 import Container from '@mui/material/Container'
-
+import './input.css'
 import { clickLoginButton } from './ChangeForm';
 import { loginMessage } from '../../recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import useAsync from '../../useAsync';
+import GotoMain from '../GotoMain'
 
 import {SERVER_LINK} from '../../serverLink'
 
@@ -81,7 +82,7 @@ function RegisterForm() {
         <legend>로그인</legend>
         <div>
           <label style={{ margin: '13px' }}>아이디</label>
-          <input
+          <input 
             onChange={(e) => {
               setRegisterForm({ ...registerForm, userId: e.target.value });
               //console.log(loginForm);
@@ -123,11 +124,12 @@ function RegisterForm() {
           회원가입
         </Button>
       </fieldset>
-        <div> 
-        {users.isRegisterAble}
 
+        <div className='testDiv' style={{display:"none"}}> 
+        {users.isRegisterAble}
         </div>
       </div>
+      <GotoMain/>
     </Container>
   );
 }

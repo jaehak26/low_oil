@@ -110,7 +110,7 @@ function SidoLowtop20(){
                             {arrData.OS_NM}
                         </div>
                     </MyTableCell>
-                    <MyTableCell>{arrData.PRICE}</MyTableCell>
+                    <MyTableCell>{arrData.PRICE} (원)</MyTableCell>
                 </TableRow>)
                     })}
             </TableBody>

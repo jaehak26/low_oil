@@ -79,7 +79,7 @@ function RegisterForm() {
       <fieldset style={{ maxWidth: '350px',
       textAlign: "left" ,
       borderColor:"rgba(4,127,242,0.5)"}}>
-        <legend>로그인</legend>
+        <legend>회원가입</legend>
         <div>
           <label style={{ margin: '13px' }}>아이디</label>
           <input 

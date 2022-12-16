@@ -17,8 +17,8 @@ const MyTableCell = styled(TableCell)({
 
 function diffColor(diff){
     //console.log(diff>=0)
-    if(Number(diff)>=0){return {color:"green"}}
-    else if(Number(diff)<0){return {color:"red"}}
+    if(Number(diff)>0){return {color:"red"}}
+    else if(Number(diff)<0){return {color:"green"}}
     else{}
     
 }

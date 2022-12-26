@@ -52,7 +52,7 @@ function RegisterForm() {
   //서버의 값과 맞는지 확인
   //server값은 간접적으로 사용하지 말고 본인값이 변할 때를 기준으로 처리
   useEffect(() => {
-    console.log(users?.isRegisterAble )
+    //console.log(users?.isRegisterAble )
     if (users?.isRegisterAble != undefined || users?.isRegisterAble != "") {
 
       if (users?.isRegisterAble == "true") {

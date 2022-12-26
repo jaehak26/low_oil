@@ -23,7 +23,7 @@ public class LoginRestController {
     public HashMap<String,String> afterClickLoginButton(LoginModel loginModel){
         HashMap<String,String> hashMap = new HashMap<>();
 
-        System.out.println(loginModel);
+        //System.out.println(loginModel);
 
         String isUserExist = userLoginService.acionLogin(loginModel);
 

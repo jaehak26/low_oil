@@ -2,7 +2,9 @@ import React,{useEffect, useState} from 'react'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container'
 import { maxWidth, styled } from '@mui/system';
-
+import InputLabel from '@mui/material/InputLabel';
+import FormLabel from '@mui/material/FormLabel';
+import FormControl from '@mui/material/FormControl';
 import theme from '../../theme'
 import AvgAllPrice from './table/avgAllPrice'
 
@@ -26,6 +28,17 @@ export const FirstPageContainer = styled(Container)({
     marginTop:"20px",
 })
 
+export const FirstPageFormControl = styled(FormControl)({
+    borderRadius: 35,
+    borderStyle: 'solid',
+    borderColor:"#047ff2",
+    borderWidth:"1px",
+    maxWidth:"xs",
+    theme:theme,
+    marginTop:"20px",
+})
+
+
 function MainPage(){
 
     return (<div>
@@ -33,20 +46,23 @@ function MainPage(){
         <LoginComp></LoginComp>
         </FirstPageContainer>
         
-
         <FirstPageContainer maxWidth="sm">
+        <FormLabel >전국 유가 평균</FormLabel>
             <AvgAllPrice></AvgAllPrice>
         </FirstPageContainer>
 
         <FirstPageContainer maxWidth="sm">
+        <FormLabel >지역별 유가 평균</FormLabel>
             <AvgSigunPriceComponent/>
         </FirstPageContainer>
         
         <FirstPageContainer maxWidth="sm">
+        <FormLabel>유가 추이</FormLabel>
             <AvgRecentPriceComponent/>
         </FirstPageContainer>
 
         <FirstPageContainer maxWidth="sm">
+        <FormLabel >최저가 주유소</FormLabel>
             <Lowtop20Component></Lowtop20Component>
         </FirstPageContainer>
 

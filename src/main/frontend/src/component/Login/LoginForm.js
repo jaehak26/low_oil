@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useInsertionEffect } from 'react';
 import Container from '@mui/material/Container'
-
+import './input.css'
 import { clickLoginButton } from './ChangeForm';
 import { loginMessage } from '../../recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import useAsync from '../../useAsync';
+import GotoMain from '../GotoMain'
+
+import { Button } from '@mui/material';
 
 import {SERVER_LINK} from '../../serverLink'
 
@@ -18,11 +21,11 @@ normalForm.append("inputId", "");
 normalForm.append("inputPwd", "");
 
 async function getUser(formdata=normalForm) {
-  console.log(formdata);
+  //console.log(formdata);
   let form = new FormData();
   form.append("inputId", formdata.inputId);
   form.append("inputPwd", formdata.inputPwd);
-  console.log(form);
+  //console.log(form);
   let requestOptions = {
     method: 'POST',
     body: form,
@@ -74,7 +77,7 @@ function LoginForm() {
 
   if (loading) return <div>로딩중..</div>;
   //if (error) return <div>에러가 발생했습니다</div>;
-  if (!users) return <button onClick={() => refetch()}>불러오기</button>;
+  if (!users) return <button onClick={userExist}>불러오기</button>;
   return (
     <Container sx={{  position: "absolute",
       top: "33%",
@@ -102,18 +105,18 @@ function LoginForm() {
           onChange={(e) => {
             setLoginForm({ ...loginForm, inputPwd: e.target.value });
           }}
-          id="inputPwd"
+          id="inputPwd" type="password"
         ></input>
 
-        <button style={{ margin: '5px' }} onClick={userExist}>
+        <Button style={{ margin: '5px' }} onClick={userExist}>
           login
-        </button>
+        </Button>
       </fieldset>
-        <div> 
+        <div className='testDiv' style={{display:'none'}}> 
         {users.isUserExist} ({users.userId}) 
-        <button onClick={refetch}>다시 불러오기</button>
         </div>
       </div>
+      <GotoMain />
     </Container>
   );
 }

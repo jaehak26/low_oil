@@ -31,7 +31,7 @@ function allPriceData(data=[[]]){
         let arrData = []    //=lineData.data
         lineData.id = lineId[idx];
         lineData.color= lineColor[idx];
-        console.log(data[idx]?.length)
+        //console.log(data[idx]?.length)
         for(let dataIdx=0; dataIdx<data[idx]?.length; dataIdx++){
             //7번 반복
             let date = stringToDate(data[idx][dataIdx]?.DATE)
@@ -42,19 +42,19 @@ function allPriceData(data=[[]]){
         lineData.data = arrData
         lineArr.push(lineData)
     }
-    console.log(lineArr)
+    //console.log(lineArr)
     return lineArr
 }
 
 function priceData(data=[],selectIdx){
     //data = [{DATE:"20001010", PRODCD:"B027", PRICE:"1660.70"},...]
-    console.log(data[0])
+    //console.log(data[0])
     let lineArr = []
     let lineData= {...defaultData}
     lineData.id = lineId[selectIdx]
     lineData.color = lineColor[selectIdx]
 
-    console.log(lineData.color)
+    //console.log(lineData.color)
 
     let arrData=[]
     for(let idx=0; idx<data.length; idx++){

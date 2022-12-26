@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from 'react'
 import { Table, TableCell, TableBody, TableRow, TableHead, MenuItem } from '@mui/material';
 import { Container } from '@mui/material'
@@ -36,7 +35,7 @@ export const lowtop20ToTable = async(areacd, prodcd, cnt)=>{
         else if(a["OS_NM"]<b["OS_NM"]){return -1}
         else if(a["OS_NM"]>b["OS_NM"]){return 1}
     })
-    console.log(arr)
+    //console.log(arr)
     return await arr
 }
 
@@ -69,7 +68,7 @@ function SidoLowtop20(){
             }
             getData()
         }
-        console.log(lowtopData)
+        //console.log(lowtopData)
     },[selected])
 
     const fromTM128ToLatLng = (mapx = 0, mapy = 0) => {
@@ -110,7 +109,7 @@ function SidoLowtop20(){
                             {arrData.OS_NM}
                         </div>
                     </MyTableCell>
-                    <MyTableCell>{arrData.PRICE}</MyTableCell>
+                    <MyTableCell>{arrData.PRICE} (원)</MyTableCell>
                 </TableRow>)
                     })}
             </TableBody>
